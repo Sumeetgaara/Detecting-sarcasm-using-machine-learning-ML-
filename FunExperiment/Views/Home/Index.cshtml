@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Issue Classifier</h1>
+    <br />
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="input-group">
+                    <input class="form-control border-secondary py-2" type="search" placeholder="Type Here" id="search-text">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="search-button" onclick="getGif()">
+                            Done
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <br />
+    <br />
+    <br />
+    <br />
+    @*<div class="h-100 row align-items-center">
+            <div class="col-lg-12">
+                <div class="col-lg-4">
+                    <div id="gif-div" style="display:none">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img" id="imageid">
+                            <div class="card-body">
+                                <h5 class="card-title">Result Gif</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div id="sarcasm-div" style="display:none">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img" id="sarcasmid">
+                            <div class="card-body">
+                                <h5 class="card-title">Sarcasm Involved.</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>*@
+
+
+
+    <div class="row">
+        <div class="col-sm-6" id="sarcasm-div" style="display:none">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Prediction from Machine Learning Model</h5>
+                    <p class="card-text">Code error Involved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6" id="gif-div" style="display:none">
+            <div class="card">
+                    <img class="card-img" id="imageid">
+                    <div class="card-body">
+                        <h5 class="card-title">Result Gif</h5>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+        <script>
+
+            function getGif() {
+                var searchText = document.getElementById("search-text").value;
+                searchurl = "http://api.giphy.com/v1/gifs/search?q=" + searchText + "&api_key=YOURAPIKEY&limit=1";
+
+                //
+                $.ajax({
+                    type: "POST",
+                    async: true,
+                    url: '/Home/SarcasmAsync',
+                    data: { param: searchText },
+                    success: function (result) {
+                        if (result == "Sarcasm") {
+                            var y = document.getElementById("sarcasm-div");
+                            if (y.style.display === "none") {
+                                y.style.display = "block";
+                            }
+                        }
+
+                    },
+                    error: function (err) {
+                        //debugger;
+                        console.log(err.responseText);
+                        alert("Error has occurred..");
+                    }
+                });
+
+                var xhr = $.get(searchurl);
+                xhr.done(function (data) {
+                    document.getElementById("imageid").src = data.data[0].images.downsized_large.url;
+                    var x = document.getElementById("gif-div");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    }
+
+                });
+
+
+            }
+
+
+        </script>

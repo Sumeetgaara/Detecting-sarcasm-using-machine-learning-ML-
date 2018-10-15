@@ -1,0 +1,11 @@
+c:\users\sneha more\source\repos\FunExperiment\MLModelSarcasm\bin\Debug\netcoreapp2.1\MLModelSarcasm.deps.json
+c:\users\sneha more\source\repos\FunExperiment\MLModelSarcasm\bin\Debug\netcoreapp2.1\MLModelSarcasm.runtimeconfig.json
+c:\users\sneha more\source\repos\FunExperiment\MLModelSarcasm\bin\Debug\netcoreapp2.1\MLModelSarcasm.runtimeconfig.dev.json
+c:\users\sneha more\source\repos\FunExperiment\MLModelSarcasm\bin\Debug\netcoreapp2.1\MLModelSarcasm.dll
+c:\users\sneha more\source\repos\FunExperiment\MLModelSarcasm\bin\Debug\netcoreapp2.1\MLModelSarcasm.pdb
+c:\users\sneha more\source\repos\FunExperiment\MLModelSarcasm\obj\Debug\netcoreapp2.1\MLModelSarcasm.csprojAssemblyReference.cache
+c:\users\sneha more\source\repos\FunExperiment\MLModelSarcasm\obj\Debug\netcoreapp2.1\MLModelSarcasm.csproj.CoreCompileInputs.cache
+c:\users\sneha more\source\repos\FunExperiment\MLModelSarcasm\obj\Debug\netcoreapp2.1\MLModelSarcasm.AssemblyInfoInputs.cache
+c:\users\sneha more\source\repos\FunExperiment\MLModelSarcasm\obj\Debug\netcoreapp2.1\MLModelSarcasm.AssemblyInfo.cs
+c:\users\sneha more\source\repos\FunExperiment\MLModelSarcasm\obj\Debug\netcoreapp2.1\MLModelSarcasm.dll
+c:\users\sneha more\source\repos\FunExperiment\MLModelSarcasm\obj\Debug\netcoreapp2.1\MLModelSarcasm.pdb
